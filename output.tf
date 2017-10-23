@@ -15,3 +15,8 @@ terraform {
 
 EOF
 }
+
+output "bucket_name" {
+  description = "S3 bucket name that has been created"
+  value = "${aws_s3_bucket.tfstate.id}"
+}
